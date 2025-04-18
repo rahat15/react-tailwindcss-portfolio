@@ -1,25 +1,25 @@
 import { useState, createContext } from 'react';
 import { aboutMeData } from '../data/aboutMeData';
-import { clientsHeading as clientsPageHeading } from '../data/clientsData';
-import { clientsData as clientsDataJson } from '../data/clientsData';
+import { Heading as TechPageHeading } from '../data/TechData';
+import { techStack as TechStackJson } from '../data/TechData';
 
 const AboutMeContext = createContext();
 
 export const AboutMeProvider = ({ children }) => {
 	const [aboutMe, setAboutMe] = useState(aboutMeData);
 
-	const clientsHeading = clientsPageHeading;
+	const Heading = TechPageHeading;
 
-	const [clientsData, setClientsData] = useState(clientsDataJson);
+	const [techStack, setTechData] = useState(TechStackJson);
 
 	return (
 		<AboutMeContext.Provider
 			value={{
 				aboutMe,
 				setAboutMe,
-				clientsHeading,
-				clientsData,
-				setClientsData,
+				Heading,
+				techStack,
+				setTechData,
 			}}
 		>
 			{children}

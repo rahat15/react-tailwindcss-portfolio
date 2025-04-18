@@ -1,10 +1,14 @@
 export const aboutMeData = [
 	{
 		id: 1,
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+		bio: `I'm Rahat Bhatia, a Computer Science graduate from Eastern Washington University with a passion for AI, robotics, and building intelligent systems that solve real-world problems.`,
 	},
 	{
 		id: 2,
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+		bio: `Alongside my technical work, I've taken on leadership roles as President of the ACM Student Chapter and Campus Lead for Google Developer Groups, where I organized workshops, tech events, and hackathons.`,
+	},
+	{
+		id: 3,
+		bio: `Outside tech, I express myself through writing and published my first poetry collection, "Too Far, Yet Too Close", blending creativity with personal reflection.`,
 	},
 ];

@@ -232,3 +232,24 @@ body {
 		opacity: 0.5;
 	}
 }
+
+/* Force right positioning globally */
+.experience-arrow {
+	position: absolute;
+	right: 1.5rem !important;
+	left: auto !important;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #60a5fa;
+	font-size: 1.25rem;
+	z-index: 10;
+	pointer-events: none;
+  }
+  
+  /* Nuclear option for RTL override */
+  [dir="rtl"] .experience-arrow {
+	right: 1.5rem !important;
+	left: auto !important;
+	inset-inline-start: auto !important;
+	inset-inline-end: 1.5rem !important;
+  }

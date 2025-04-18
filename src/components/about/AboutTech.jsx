@@ -1,18 +1,18 @@
 import { useContext } from 'react';
 import AboutMeContext from '../../context/AboutMeContext';
-import AboutClientSingle from './AboutClientSingle';
+import AboutTechSingle from './AboutTechSingle';
 
-const AboutClients = () => {
-	const { clientsData, clientsHeading } = useContext(AboutMeContext);
+const AboutTech = () => {
+	const { techStack, Heading } = useContext(AboutMeContext);
 
 	return (
 		<div className="mt-10 sm:mt-20">
 			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
-				{clientsHeading}
+				{Heading}
 			</p>
 			<div className="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">
-				{clientsData.map((client) => (
-					<AboutClientSingle
+				{techStack.map((client) => (
+					<AboutTechSingle
 						title={client.title}
 						image={client.img}
 						key={client.id}
@@ -23,4 +23,4 @@ const AboutClients = () => {
 	);
 };
 
-export default AboutClients;
+export default AboutTech;

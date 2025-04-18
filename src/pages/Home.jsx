@@ -3,14 +3,18 @@ import AppBanner from '../components/shared/AppBanner';
 import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
+import ChatWidget from '../components/chat/ChatWidget'; // ✅ Import the widget
 
 const Home = () => {
 	return (
 		<div className="container mx-auto">
-			<AppBanner></AppBanner>
+			<AppBanner />
+
+			{/* ✅ Chat Widget goes here */}
+			<ChatWidget />
 
 			<ProjectsProvider>
-				<ProjectsGrid></ProjectsGrid>
+				<ProjectsGrid limit={3} />
 			</ProjectsProvider>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">
