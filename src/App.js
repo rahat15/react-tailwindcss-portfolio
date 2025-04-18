@@ -6,6 +6,7 @@ import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
 import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Lazy load pages
 const About = lazy(() => import('./pages/AboutMe'));
@@ -18,6 +19,8 @@ const Chatbot = lazy(() => import('./pages/Chatbot')); // 👈 Added chatbot pag
 
 function App() {
 	return (
+		<>
+		<SpeedInsights />
 		<AnimatePresence>
 			<div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
@@ -39,6 +42,7 @@ function App() {
 				<UseScrollToTop />
 			</div>
 		</AnimatePresence>
+		</>
 	);
 }
 
