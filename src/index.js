@@ -10,7 +10,7 @@ const root = createRoot(container);
 root.render(
     <>
     <App />
-    <SpeedInsights />
+    {process.env.NODE_ENV === 'production' && <SpeedInsights />}
     </>
 
 );

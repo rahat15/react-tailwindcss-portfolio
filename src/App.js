@@ -20,7 +20,7 @@ const Chatbot = lazy(() => import('./pages/Chatbot')); // 👈 Added chatbot pag
 function App() {
 	return (
 		<>
-		<SpeedInsights />
+		{process.env.NODE_ENV === 'production' && <SpeedInsights />}
 		<AnimatePresence>
 			<div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
