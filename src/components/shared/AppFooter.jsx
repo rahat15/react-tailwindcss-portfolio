@@ -1,4 +1,5 @@
 import {
+	FiInstagram,
 	FiGithub,
 	FiTwitter,
 	FiLinkedin,
@@ -8,31 +9,42 @@ import {
 import AppFooterCopyright from './AppFooterCopyright';
 
 const socialLinks = [
+	
 	{
 		id: 1,
-		icon: <FiGlobe />,
-		url: 'https://www.stoman.me/',
+		icon: <FiGithub />,
+		url: 'https://github.com/rahat15',
 	},
 	{
 		id: 2,
-		icon: <FiGithub />,
-		url: 'https://github.com/realstoman',
+		icon: <FiLinkedin />,
+		url: 'www.linkedin.com/in/rahat-bhatia-9b5958263',
 	},
 	{
 		id: 3,
-		icon: <FiTwitter />,
-		url: 'https://twitter.com/realstoman',
+		icon: <FiInstagram />,
+		url: 'https://instagram.com/_rahat15',
 	},
-	{
-		id: 4,
-		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/realstoman',
-	},
-	{
-		id: 5,
-		icon: <FiYoutube />,
-		url: 'https://www.youtube.com/c/realstoman',
-	},
+	// {
+	// 	id: 1,
+	// 	icon: <FiGlobe />,
+	// 	url: 'https://www.stoman.me/',
+	// },
+	// {
+	// 	id: 3,
+	// 	icon: <FiTwitter />,
+	// 	url: 'https://twitter.com/realstoman',
+	// },
+	// {
+	// 	id: 4,
+	// 	icon: <FiLinkedin />,
+	// 	url: 'https://www.linkedin.com/in/realstoman',
+	// },
+	// {
+	// 	id: 5,
+	// 	icon: <FiYoutube />,
+	// 	url: 'https://www.youtube.com/c/realstoman',
+	// },
 ];
 
 const AppFooter = () => {

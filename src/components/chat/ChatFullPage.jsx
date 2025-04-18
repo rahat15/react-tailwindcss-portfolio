@@ -56,23 +56,24 @@ const ChatFullPage = () => {
         }
     };
 
+    const handleSuggestedClick = (question) => {
+        setInput(question);
+        setTimeout(() => {
+            document.getElementById('hidden-submit')?.click();
+        }, 0);
+    };
+
     return (
         <div className="container mx-auto min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
 
-
-            {/* Header - Centered, no border */}
+            {/* Header */}
             <header className="w-full px-6 py-4 mt-10 text-center">
                 <h1 className="text-xl font-medium text-gray-800 dark:text-gray-200">
                     Chat with RahBot
                 </h1>
             </header>
 
-
-
-
-
             <div className="mt-4 pt-2 pb-2 border-t-2 border-primary-light dark:border-secondary-dark"></div>
-
 
             {/* Chat Area */}
             <main
@@ -87,10 +88,10 @@ const ChatFullPage = () => {
                         <div
                             className="inline-block rounded-lg px-4 py-2 shadow-sm whitespace-pre-wrap break-words text-sm text-left"
                             style={{
-                                backgroundColor: '#c7d2fe', // Your original indigo color
+                                backgroundColor: '#c7d2fe',
                                 color: '#1e1e1e',
                                 maxWidth: '80%',
-                                marginLeft: msg.sender === 'bot' ? 'auto' : '0' // Force right-side only for bot
+                                marginLeft: msg.sender === 'bot' ? 'auto' : '0'
                             }}
                         >
                             <div className="text-xs font-medium mb-1 text-gray-700">
@@ -108,7 +109,7 @@ const ChatFullPage = () => {
                 )}
             </main>
 
-
+            {/* Input Area */}
             <form
                 onSubmit={sendMessage}
                 className="w-full px-4 sm:px-8 py-4 bg-white dark:bg-gray-900"
@@ -122,9 +123,8 @@ const ChatFullPage = () => {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                         />
-
-                        {/* Embedded send button on right inside input */}
                         <button
+                            id="hidden-submit"
                             type="submit"
                             className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-300"
                         >
@@ -133,6 +133,41 @@ const ChatFullPage = () => {
                     </div>
                 </div>
             </form>
+
+           {/* Prompt Tiles Section BELOW input */}
+           <div className="w-full max-w-4xl mx-auto px-4 sm:px-8 mt-8 mb-10">
+  <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3">
+    Suggested Questions
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    {[
+      "Tell me about your research in AI.",
+      "What projects are you most proud of?",
+      "Can I connect with you on LinkedIn?",
+      "Do you have any awards?",
+      "What’s your role in SmartBot?",
+      "Which tools do you often use?"
+    ].map((q, i) => (
+      <div
+        key={i}
+        onClick={() => handleSuggestedClick(q)}
+        className="cursor-pointer rounded-lg p-4 text-sm text-[#1e1e1e] dark:text-white"
+        style={{
+          backgroundColor: '#c7d2fe', // light indigo
+          transition: 'background-color 0.2s ease-in-out',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = '#a5b4fc'; // darker hover
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = '#c7d2fe';
+        }}
+      >
+        {q}
+      </div>
+    ))}
+  </div>
+</div>
 
 
 
