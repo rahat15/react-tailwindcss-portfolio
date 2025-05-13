@@ -15,6 +15,7 @@ const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Experience = lazy(() => import('./pages/Experience'));
 const Chatbot = lazy(() => import('./pages/Chatbot')); // 👈 Added chatbot page
+const ContributionsAndInterests = lazy(() => import('./pages/ContributionsAndInterests'));
 
 function App() {
 	return (
@@ -32,6 +33,8 @@ function App() {
 							<Route path="contact" element={<Contact />} />
 							<Route path="experience" element={<Experience />} />
 							<Route path="chatbot" element={<Chatbot />} /> {/* ✅ Chatbot Route */}
+							<Route path="contributions" element={<ContributionsAndInterests />} />
+
 						</Routes>
 					</Suspense>
 					<AppFooter />

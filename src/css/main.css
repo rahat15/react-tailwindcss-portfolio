@@ -1477,4 +1477,29 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll-marquee 25s linear infinite;
+  }
+  
+  @keyframes scroll-marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  
 }
