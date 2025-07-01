@@ -31,6 +31,8 @@ const AboutCounter = () => {
 			.catch((err) => console.error('Visitor counter error:', err));
 	}, [update]);
 
+	const roundedViews = views !== null ? Math.round(views / 10) * 10 : 0;
+
 	return (
 		<div className="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
 			<div className="font-general-medium container mx-auto py-20 flex flex-col items-center justify-center">
@@ -77,7 +79,11 @@ const AboutCounter = () => {
 				<div className="grid grid-cols-1 sm:grid-cols-1 gap-8 w-full text-center">
 					<CounterItem
 						title="Website Views"
-						counter={<span id="viewsCounter">{views !== null ? `${Math.round(views / 10) * 10}+` : ''}</span>}
+						counter={
+							<>
+								<span id="viewsCounter">{roundedViews}</span>+
+							</>
+						}
 						measurement=""
 					/>
 				</div>
