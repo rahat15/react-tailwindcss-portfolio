@@ -18,7 +18,7 @@ const socialLinks = [
 	{
 		id: 2,
 		icon: <FiLinkedin />,
-		url: 'www.linkedin.com/in/rahat-bhatia-9b5958263',
+		url: 'https://www.linkedin.com/in/rahat-bhatia-9b5958263',
 	},
 	{
 		id: 3,

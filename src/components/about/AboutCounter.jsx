@@ -22,11 +22,11 @@ const AboutCounter = () => {
 	});
 
 	useEffect(() => {
-		fetch('https://api.countapi.xyz/hit/rahatsite/visits')
+		fetch('/api/views')
 			.then((res) => res.json())
 			.then((data) => {
-				setViews(data.value);
-				update(data.value); // start or update the counter
+				setViews(data.views);
+				update(data.views); // start or update the counter
 			})
 			.catch((err) => console.error('Visitor counter error:', err));
 	}, [update]);

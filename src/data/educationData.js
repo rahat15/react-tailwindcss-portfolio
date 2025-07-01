@@ -1,15 +1,14 @@
 const educationData = [
     {
-      degree: 'Master of Engineering (MEng) in Mechanical Engineering',
-      specialization: 'Control of Robotics and Autonomous Systems',
-      institution: 'University of California, Berkeley',
-      logo: '/images/edu/uc_berkeley.png',
-      duration: 'Fall 2025 – Spring 2026 (Expected)',
+      degree: 'Master of Science (M.S.) in Computer Science',
+      institution: 'University of California, San Diego',
+      logo: '/images/edu/ucsd.png',
+      duration: 'Fall 2025 – Spring 2027 (Expected)',
       bulletPoints: [
         'Specialization: Control systems, autonomous robotics, and AI integration',
         'Hands-on capstone project with real-world deployment goals',
         'Coursework includes optimal control, learning-based planning, and robotic perception',
-        'Exploring research contributions at Berkeley AI Research (BAIR) Lab',
+        'Exploring research contributions at AI Research Lab',
         'Focused on motion planning, sensor fusion, and embedded autonomy',
       ],
     },
