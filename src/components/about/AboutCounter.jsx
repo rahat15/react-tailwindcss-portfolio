@@ -23,13 +23,13 @@ const AboutCounter = () => {
 
 	useEffect(() => {
 		fetch('/api/views')
-			.then((res) => res.json())
-			.then((data) => {
-				setViews(data.views);
-				update(data.views); // start or update the counter
-			})
-			.catch((err) => console.error('Visitor counter error:', err));
-	}, [update]);
+		  .then((res) => res.json())
+		  .then((data) => {
+			setViews(data.views);
+			update(data.views);
+		  })
+		  .catch((err) => console.error('Visitor counter error:', err));
+	  }, [update]);
 
 	return (
 		<div className="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
