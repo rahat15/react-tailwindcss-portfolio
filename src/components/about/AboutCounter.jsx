@@ -81,10 +81,10 @@ const AboutCounter = () => {
 						title="Website Views"
 						counter={
 							<>
-								<span id="viewsCounter">{roundedViews}</span>+
+								<span id="viewsCounter">{roundedViews}</span>
 							</>
 						}
-						measurement=""
+						measurement="+"
 					/>
 				</div>
 			</div>

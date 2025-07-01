@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
 import ScrollToTop from './components/ScrollToTop';
 import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
@@ -41,7 +40,6 @@ function App() {
 					<AppFooter />
 				</Router>
 				<UseScrollToTop />
-				<Analytics />
 			</div>
 		</AnimatePresence>
 	);
