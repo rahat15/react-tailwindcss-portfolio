@@ -1,14 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 
-// Use a simpler path that works better on Vercel
-const VIEWS_FILE = path.join(process.cwd(), 'views.json');
+// Use /tmp directory which is writable on Vercel
+const VIEWS_FILE = '/tmp/views.json';
 
 function getViews() {
   try {
     if (fs.existsSync(VIEWS_FILE)) {
       const data = fs.readFileSync(VIEWS_FILE, 'utf8');
-      return JSON.parse(data).views || 0;
+      const parsed = JSON.parse(data);
+      return parsed.views || 0;
     }
     return 0;
   } catch (error) {
@@ -19,7 +20,9 @@ function getViews() {
 
 function setViews(count) {
   try {
-    fs.writeFileSync(VIEWS_FILE, JSON.stringify({ views: count }));
+    const data = JSON.stringify({ views: count });
+    fs.writeFileSync(VIEWS_FILE, data);
+    console.log('Successfully wrote views:', count);
   } catch (error) {
     console.error('Error writing views file:', error);
   }
