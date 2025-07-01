@@ -23,13 +23,13 @@ const AboutCounter = () => {
 
 	useEffect(() => {
 		fetch('/api/views')
-		  .then((res) => res.json())
-		  .then((data) => {
-			setViews(data.views);
-			update(data.views);
-		  })
-		  .catch((err) => console.error('Visitor counter error:', err));
-	  }, [update]);
+			.then((res) => res.json())
+			.then((data) => {
+				setViews(data.views);
+				update(data.views);
+			})
+			.catch((err) => console.error('Visitor counter error:', err));
+	}, [update]);
 
 	return (
 		<div className="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
@@ -77,7 +77,7 @@ const AboutCounter = () => {
 				<div className="grid grid-cols-1 sm:grid-cols-1 gap-8 w-full text-center">
 					<CounterItem
 						title="Website Views"
-						counter={<span id="viewsCounter" />}
+						counter={<span id="viewsCounter">{views !== null ? `${Math.round(views / 10) * 10}+` : ''}</span>}
 						measurement=""
 					/>
 				</div>
